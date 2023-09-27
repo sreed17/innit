@@ -1,4 +1,8 @@
-# innit-mono
+# innit
+
+A mock backend for a interest based social networking app.
+
+Refer to API documentation after running the docker image (below). (Documentation implemented using swagger)
 
 ## HOW TO RUN
 
@@ -7,10 +11,10 @@ For running the innit network in docker follow the instructions below:
 
 ```ps
 # clone the repo
-git clone https://github.com/flamigo-social/innit-mono.git
+git clone https://github.com/sreed17/innit.git
 
 # change directory to the one previously cloned
-cd innit-mono
+cd <cloned-directory>
 
 # run the run.bat file
 ./run.bat

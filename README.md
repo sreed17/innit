@@ -4,7 +4,7 @@ A mock backend for a interest based social networking app.
 
 Refer to API documentation after running the docker image (below). (Documentation implemented using swagger)
 
-![System Overview]()
+![System Overview](docs/Progress.jpg)
 
 ## HOW TO RUN
 

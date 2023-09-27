@@ -16,7 +16,7 @@ For running the innit network in docker follow the instructions below:
 git clone https://github.com/sreed17/innit.git
 
 # change directory to the one previously cloned
-cd <cloned-directory>
+cd innit
 
 # run the run.bat file
 ./run.bat

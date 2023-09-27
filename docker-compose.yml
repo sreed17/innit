@@ -1,0 +1,29 @@
+version: "3.8"
+services:
+  core_api:
+    build:
+      context: ./packages/core
+      dockerfile: Dockerfile.prod
+    ports:
+      - "50000:50000"
+    environment:
+      - "DATABASE=mongodb://mongop:27017/?replicaSet=innit-db-set&directConnection=true"
+    networks:
+      - innit_network
+    restart: always
+  media_server:
+    build:
+      context: ./packages/media_server
+      dockerfile: Dockerfile.prod
+    ports:
+      - "60000:60000"
+    environment:
+      - "DATABASE=mongodb://mongop:27017/?replicaSet=innit-db-set&directConnection=true"
+    networks:
+      - innit_network
+    restart: always
+networks:
+  innit_network:
+    name: innit_network
+    driver: bridge
+    external: true

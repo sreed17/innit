@@ -1,0 +1,16 @@
+{
+  "name": "innit",
+  "version": "0.0.0",
+  "description": "Innit app",
+  "main": "index.js",
+  "repository": "https://github.com/flamigo-social/innit-mono.git",
+  "author": "SReED17 <inbox.sreekanthd@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^7.0.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

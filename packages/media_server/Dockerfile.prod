@@ -1,0 +1,10 @@
+FROM node:alpine
+WORKDIR /innit-media-server
+ENV PORT 60000
+ENV DATABASE mongodb-connection-url
+EXPOSE 60000
+COPY package.json .
+RUN npm install
+COPY . .
+RUN npm run build
+CMD ["npm", "run", "start"]

@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  mongop:
+    container_name: mongop
+    image: mongo
+    volumes:
+      - ./mongo_db/data:/data/db
+      - ./mongo_db/scripts:/scripts
+    networks:
+      - innit_network
+    ports:
+      - "30001:27021"
+    restart: always
+    entrypoint:
+      ["/usr/bin/mongod", "--bind_ip_all", "--replSet", "innit-db-set"]
+networks:
+  innit_network:
+    name: innit_network
+    driver: bridge
